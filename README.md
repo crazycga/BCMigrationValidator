@@ -12,19 +12,18 @@ When running an Business Central Cloud Migration, the system creates three table
 This program will examine the data in these tables and execute tests against that data to expose known weaknesses (and downright blocking issues) in the data that have caused problems before.
 
 # Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+Connecting to your environment requires local / network access to the database.  The appsettings.json file is the current method used to house the credentials (this will change in the future, when I figure out better ways to do it.)  The following settings are required:
+
+|Setting|Use|Default|
+|---|---|---|
+|LogLevel|*currently unused*|Debug|
+|DefaultServer|Server location|*none*|
+|DefaultDatabase|DYNAMICS database name|*none*|
+|DefaultUser|A SQL user with access to read the DYNAMICS database tables|*none*|
+|DefaultPassword|Password for SQL user|*none*|
 
 # Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+This should build properly using Visual Studio 2022, in .NET 6.
 
 # Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+I am open to and welcome any suggestions or contributions.  My intent is to create a validation routine that might help others avoid having to place a call with Microsoft during migration from Dynamics GP to Dynamics 365 Business Central.  I especially welcome any knowledge transfer or information about how the cloud migration works, and where my assumptions might be wrong.  And I welcome any feedback on coding style.  I am an accountant by training, a self-taught (mostly, some official training) programmer, and handle integrations mostly.
