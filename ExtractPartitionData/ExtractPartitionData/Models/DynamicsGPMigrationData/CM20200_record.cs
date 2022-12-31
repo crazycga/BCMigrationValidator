@@ -221,7 +221,120 @@ public class CM20200_record : _DynamicsGPMigrationRecord_class
             testsPassed = false;
         }
 
+        if (BasicTests.TestBoolean(this.DYDEPCLR) == false)
+        {
+            AppendOutput("Record: " + this.CHEKBKID + "; DYDEPCLR failed validation...");
+            testsPassed = false;
+        }
 
+        if (BasicTests.TestFloat(this.MXCHDLR) == false)
+        {
+            AppendOutput("Record: " + this.CHEKBKID + "; MXCHDLR failed validation...");
+            testsPassed = false;
+        }
+
+        if (BasicTests.TestBoolean(this.DUPCHNUM) == false)
+        {
+            AppendOutput("Record: " + this.CHEKBKID + "; DUPCHNUM failed validation...");
+            testsPassed = false;
+        }
+
+        if (BasicTests.TestBoolean(this.OVCHNUM1) == false)
+        {
+            AppendOutput("Record: " + this.CHEKBKID + "; OVCHNUM1 failed validation...");
+            testsPassed = false;
+        }
+
+        if (BasicTests.TestDateTime(this.Last_Reconciled_Date) == false)
+        {
+            AppendOutput("Record: " + this.CHEKBKID + "; Last_Reconciled_Date failed validation...");
+            testsPassed = false;
+        }
+
+        if (BasicTests.TestFloat(this.Last_Reconciled_Balance) == false)
+        {
+            AppendOutput("Record: " + this.CHEKBKID + "; Last_Reconciled_Balance failed validation...");
+            testsPassed = false;
+        }
+
+        if (BasicTests.TestFloat(this.CURRBLNC) == false)
+        {
+            AppendOutput("Record: " + this.CHEKBKID + "; CURRBLNC failed validation...");
+            testsPassed = false;
+        }
+
+        if (BasicTests.TestDateTime(this.CREATDDT) == false)
+        {
+            AppendOutput("Record: " + this.CHEKBKID + "; CREATDDT failed validation...");
+            testsPassed = false;
+        }
+
+        if (BasicTests.TestDateTime(this.MODIFDT) == false)
+        {
+            AppendOutput("Record: " + this.CHEKBKID + "; MODIFDT failed validation...");
+            testsPassed = false;
+        }
+
+        if (BasicTests.TestBoolean(this.Recond) == false)
+        {
+            AppendOutput("Record: " + this.CHEKBKID + "; Recond failed validation...");
+            testsPassed = false;
+        }
+
+        if (BasicTests.TestFloat(this.Reconcile_In_Progress) == false)
+        {
+            AppendOutput("Record: " + this.CHEKBKID + "; Reconcile_In_Progress failed validation...");
+            testsPassed = false;
+        }
+
+        if (BasicTests.TestFloat(this.Deposit_In_Progress) == false)
+        {
+            AppendOutput("Record: " + this.CHEKBKID + "; Deposit_In_Progress failed validation...");
+            testsPassed = false;
+        }
+
+        if (BasicTests.TestFloat(this.ADPVADLR) == false)
+        {
+            AppendOutput("Record: " + this.CHEKBKID + "; ADPVADLR failed validation...");
+            testsPassed = false;
+        }
+
+        if (BasicTests.TestInteger(this.DYCHTCLR) == false)
+        {
+            AppendOutput("Record: " + this.CHEKBKID + "; DYCHTCLR failed validation...");
+            testsPassed = false;
+        }
+
+        if (BasicTests.TestInteger(this.CMPANYID) == false)
+        {
+            AppendOutput("Record: " + this.CHEKBKID + "; CMPANYID failed validation...");
+            testsPassed = false;
+        }
+
+        if (BasicTests.TestInteger(this.CHKBKTYP) == false)
+        {
+            AppendOutput("Record: " + this.CHEKBKID + "; CHKBKTYP failed validation...");
+            testsPassed = false;
+        }
+
+        if (BasicTests.TestInteger(this.DDACTNUM) == false)
+        {
+            AppendOutput("Record: " + this.CHEKBKID + "; DDACTNUM failed validation...");
+            testsPassed = false;
+        }
+
+        if (BasicTests.TestInteger(this.DDTRANS) == false)
+        {
+            AppendOutput("Record: " + this.CHEKBKID + "; DDTRANS failed validation...");
+            testsPassed = false;
+        }
+
+        if (BasicTests.TestInteger(this.CashInTransAcctIdx) == false)
+        {
+            AppendOutput("Record: " + this.CHEKBKID + "; CashInTransAcctIdx failed validation...");
+            testsPassed = false;
+        }
+
+        return testsPassed;
     }
-
 }

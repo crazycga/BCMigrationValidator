@@ -35,6 +35,12 @@ static class BasicTests
         }
     }
 
+    /// <summary>
+    /// Will determine if the testData is a boolean if it can survive a boolean.TryParse **OR** if it is a 1 or 0
+    /// </summary>
+    /// <param name="testData">String to be tested</param>
+    /// <param name="acceptNull">Determines whether nulls are allowed or not; default NOT allowed</param>
+    /// <returns>True if the string can be converted to a boolean; false if not</returns>
     public static bool TestBoolean(string? testData, bool acceptNull = false)
     {
         if ((!acceptNull) && (testData == null))
@@ -43,7 +49,33 @@ static class BasicTests
         }
         else
         {
-            return Boolean.TryParse(testData, out var result);
+            if (int.TryParse(testData, out var result))
+            {
+                if ((result == 1) || (result == 0))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return Boolean.TryParse(testData, out var result_secondary);
+            }
+        }
+    }
+
+    public static bool TestDateTime(string? testData, bool acceptNull = false)
+    {
+        if ((!acceptNull && testData == null))
+        {
+            return false;
+        }
+        else
+        {
+            return DateTime.TryParse(testData, out var result);
         }
     }
 }
